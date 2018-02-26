@@ -1,0 +1,19 @@
+/*!
+ * Yogic
+ * Copyright 2018 Yogic.
+ */
+
+// Custom Variables Override
+@import "yogic/variables";
+
+// Bootstrap Core File import Here
+@import 'bootstrap';
+
+// FontAwesome Import
+@import 'font-awesome/stylesheets/font-awesome';
+
+// Project Core File import Here
+@import 'yamm/yamm';
+
+// Project Core File import Here
+@import 'yogic';
