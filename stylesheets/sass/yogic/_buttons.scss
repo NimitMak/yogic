@@ -1,0 +1,44 @@
+// Contains all custom buttons related classes
+// Use Mixins wherever required instead of writing magical numbers or re-inventing the wheel.
+// Fluid Button i.e. Button which occupies full 100% width
+// synonyms btn-fluid, btn-fw, btn-full-wifth
+.btn-fluid,
+.btn-fw,
+.btn-full-width,
+.fluid-width,
+.full-width {
+  width: 100% !important;
+}
+
+.btn-lg {
+  @extend .btn-lg;
+  min-height: 48px;
+  font-size: $font-size-h5;
+}
+
+.btn-sm {
+  @extend .btn-sm;
+  min-height: 40px;
+  font-size: $font-size-h5;
+}
+
+// Resetting the border on btn-* classes
+.btn-primary,
+.btn-warning,
+.btn-danger,
+.btn-info,
+.btn-success {
+  border-color: transparent;
+  &:hover {
+    border-color: transparent;
+  }
+}
+
+// Custom Buttons
+.btn-default-action {
+  background-color: #333333;
+  color: #fff;
+  &:hover, &:focus {
+    color: #fff;
+  }
+}

@@ -1,0 +1,43 @@
+// Normalize
+.form-control::-webkit-input-placeholder {
+  color: #9f9f9b;
+}
+
+.form-control:-moz-placeholder {
+  color: #9f9f9b;
+}
+
+.form-control::-moz-placeholder {
+  color: #9f9f9b;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #9f9f9b;
+}
+
+// Resetting some html and body classes for sticky footer
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+// Overriding default text selection color
+::selection {
+  background: darken($brand-warning, 5%); /* WebKit/Blink Browsers */
+  color: $white-base;
+}
+
+::-moz-selection {
+  background: darken($brand-warning, 5%); /* Gecko Browsers */
+  color: $white-base;
+}
+
+// Normalizing z-index of selectize input
+.selectize-input {
+  z-index: 0;
+}
+
+// Cursor pointer on anchor tags
+a {
+  @extend .cursor-pointer;
+}

@@ -1,0 +1,86 @@
+// Overriding the base font size
+html,
+body {
+  font-size: $font-size-base;
+  @include scrollbars(8px, $gray-dark, transparent, 10px);
+  @include mediaQuery($max, $pre-tablet) {
+    font-size: $font-size-base - 2;
+  }
+}
+
+// Custom Text Classes
+.text-xs-small {
+  @include fontSize(8px, !important);
+}
+
+.text-extra-small {
+  @include fontSize(10px, !important);
+}
+
+.text-small {
+  @include fontSize(12px, !important);
+}
+
+.text-base {
+  @include fontSize(14px, !important);
+}
+
+.text-medium {
+  @include fontSize(16px, !important);
+}
+
+.text-large {
+  @include fontSize(18px, !important);
+}
+
+// Custom Text emphasis
+.text-light {
+  font-weight: 300;
+}
+
+.text-normal {
+  font-weight: 400;
+}
+
+.text-semibold {
+  font-weight: 600;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-tnr {
+  font-family: 'Times New Roman';
+}
+
+// Negate margin and padding for heading tags
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+.p {
+  margin: 0;
+}
+
+// Custom text
+@include text-emphasis-variant('.text-white', $white-base);
+
+@include text-emphasis-variant('.text-gray', $gray);
+
+@include text-emphasis-variant('.text-gray-dark', $gray-dark);
+
+@include text-emphasis-variant('.text-gray-darker', $gray-darker);
+
+@include text-emphasis-variant('.text-gray-light', $gray-light);
+
+@include text-emphasis-variant('.text-gray-lighter', $gray-lighter);
+
+@include text-emphasis-variant('.text-gray-lightest', $gray-lightest);

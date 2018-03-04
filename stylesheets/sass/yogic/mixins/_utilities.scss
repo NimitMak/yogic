@@ -1,0 +1,132 @@
+// Mixin For creating clipped ellipsis text
+@mixin ellipsis($no-of-lines) {
+  display: -moz-box;
+  display: box;
+  display: -webkit-box;
+  -webkit-line-clamp: $no-of-lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: -moz-pre-space;
+}
+
+/// Mixin to customize scrollbars
+/// Beware, this does not work in all browsers
+/// @author Hugo Giraudel
+/// @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
+/// @param {Color} $foreground-color - Scrollbar's color
+/// @param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
+/// @example scss - Scrollbar styling
+///   @include scrollbars(.5em, slategray);
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%), $radius: 0px) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: $radius;
+    background: $foreground-color;
+  }
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+// Spacing Related Mixins
+// Used basically for margins and paddings
+@mixin spacing-generator($parent, $type, $top: null, $right: null, $bottom: null, $left: null) {
+  #{$parent} {
+    @if $top {
+      @if $type==padding {
+        padding-top: $top * 1px !important;
+        @include mediaQuery($max, $pre-tablet) {
+          padding-top: ($top * 1px)/2 !important;
+        }
+      }
+      @if $type==margin {
+        margin-top: $top * 1px !important;
+        @include mediaQuery($max, $pre-tablet) {
+          margin-top: ($top * 1px)/2 !important;
+        }
+      }
+    }
+    @if $right {
+      @if $type==padding {
+        padding-right: $right * 1px !important;
+        @include mediaQuery($max, $pre-tablet) {
+          padding-right: ($right * 1px)/2 !important;
+        }
+      }
+      @if $type==margin {
+        margin-right: $right * 1px !important;
+        @include mediaQuery($max, $pre-tablet) {
+          margin-right: ($right * 1px)/2 !important;
+        }
+      }
+    }
+    @if $bottom {
+      @if $type==padding {
+        padding-bottom: $bottom * 1px !important;
+        @include mediaQuery($max, $pre-tablet) {
+          padding-bottom: ($bottom * 1px)/2 !important;
+        }
+      }
+      @if $type==margin {
+        margin-bottom: $bottom * 1px !important;
+        @include mediaQuery($max, $pre-tablet) {
+          margin-bottom: ($bottom * 1px)/2 !important;
+        }
+      }
+    }
+    @if $left {
+      @if $type==padding {
+        padding-left: $left * 1px !important;
+        @include mediaQuery($max, $pre-tablet) {
+          padding-left: ($left * 1px)/2 !important;
+        }
+      }
+      @if $type==margin {
+        margin-left: $left * 1px !important;
+        @include mediaQuery($max, $pre-tablet) {
+          margin-left: ($left * 1px)/2 !important;
+        }
+      }
+    }
+  }
+}
+
+// Positioning Mixin
+// Example Usage:
+// .element {
+//   @include absolute(top 0 left 1em);
+// }
+// .other-element {
+//   @include fixed(top 1em left "WAT? A STRING?!" right 10% bottom)
+// }
+@mixin position($position, $args) {
+  @each $o in top right bottom left {
+    $i: index($args, $o);
+    @if $i and $i + 1<=length($args) and type-of(nth($args, $i + 1))==number {
+      #{$o}: nth($args, $i + 1);
+    }
+  }
+  position: $position;
+}
+
+@mixin absolute($args) {
+  @include position(absolute, $args);
+}
+
+@mixin fixed($args) {
+  @include position(fixed, $args);
+}
+
+@mixin relative($args) {
+  @include position(relative, $args);
+}

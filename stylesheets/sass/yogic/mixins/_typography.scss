@@ -1,0 +1,23 @@
+// Mixin for font-size
+@mixin font-size($size) {
+  font-size: $size;
+}
+
+// Function Which Calculates size in rem units
+
+@function calculateRem($size) {
+  $remSize: $size / $font-size-base;
+  @return #{$remSize}rem;
+}
+
+// A Mixin Which Uses calculateRem Function to generate font size in rem with px fallback.
+
+@mixin fontSize($size, $imp:null) {
+  @if $imp {
+    font-size: $size $imp; //Fallback in px
+    font-size: calculateRem($size) $imp;
+  } @else {
+    font-size: $size; //Fallback in px
+    font-size: calculateRem($size);
+  }
+}

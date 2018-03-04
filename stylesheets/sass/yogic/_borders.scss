@@ -1,0 +1,225 @@
+// Custom Border Classes
+// @import "compass/css3/border-radius";
+
+// White Border Custom Classes
+.b-all-white {
+  border: 1px solid #ffffff;
+}
+
+.b-top-white {
+  border-top: 1px solid #ffffff;
+}
+
+.b-bottom-white {
+  border-bottom: 1px solid #ffffff;
+}
+
+.b-right-white {
+  border-right: 1px solid #ffffff;
+}
+
+.b-left-white {
+ border-left: 1px solid #ffffff;
+}
+
+// Primary Color Border Custom Classes
+.b-all-primary {
+  border: 1px solid $brand-primary;
+}
+
+.b-top-primary {
+  border-top: 1px solid $brand-primary;
+}
+
+.b-bottom-primary {
+  border-bottom: 1px solid $brand-primary;
+}
+
+.b-right-primary {
+  border-right: 1px solid $brand-primary;
+}
+
+.b-left-primary {
+  border-left: 1px solid $brand-primary;
+}
+
+// Info Color Border Custom Classes
+.b-all-info {
+  border: 1px solid $brand-info;
+}
+
+.b-top-info {
+  border-top: 1px solid $brand-info;
+}
+
+.b-bottom-info {
+  border-bottom: 1px solid $brand-info;
+}
+
+.b-right-info {
+  border-right: 1px solid $brand-info;
+}
+
+.b-left-info {
+  border-left: 1px solid $brand-info;
+}
+
+// Warning Color Border Custom Classes
+.b-all-warning {
+  border: 1px solid $brand-warning;
+}
+
+.b-top-warning {
+  border-top: 1px solid $brand-warning;
+}
+
+.b-bottom-warning {
+  border-bottom: 1px solid $brand-warning;
+}
+
+.b-right-warning {
+  border-right: 1px solid $brand-warning;
+}
+
+.b-left-warning {
+  border-left: 1px solid $brand-warning;
+}
+
+// Success Color Border Custom Classes
+.b-all-success {
+  border: 1px solid $brand-success;
+}
+
+.b-top-success {
+  border-top: 1px solid $brand-success;
+}
+
+.b-bottom-success {
+  border-bottom: 1px solid $brand-success;
+}
+
+.b-right-success {
+  border-right: 1px solid $brand-success;
+}
+
+.b-left-success {
+  border-left: 1px solid $brand-success;
+}
+
+// Danger Color Border Custom Classes
+.b-all-danger {
+  border: 1px solid $brand-danger !important;
+}
+
+.b-top-danger {
+  border-top: 1px solid $brand-danger;
+}
+
+.b-bottom-danger {
+  border-bottom: 1px solid $brand-danger;
+}
+
+.b-right-danger {
+  border-right: 1px solid $brand-danger;
+}
+
+.b-left-danger {
+  border-left: 1px solid $brand-danger;
+}
+
+.b-bottom-gray-dark {
+  border-bottom: 1px solid $gray-dark;
+}
+
+.b-top-gray-dark {
+  border-top: 1px solid $gray-dark;
+}
+
+.b-bottom-gray-lightest {
+  border-bottom: 1px solid $gray-lightest;
+}
+
+.b-right-gray-lightest {
+  border-right: 1px solid $gray-lightest !important;
+}
+
+.b-left-gray-lightest {
+  border-left: 1px solid $gray-lightest;
+}
+
+.b-top-gray-lightest {
+  border-top: 1px solid $gray-lightest;
+}
+
+.b-all-gray-lightest {
+  border: 1px solid $gray-lightest;
+}
+
+.b-all-gray-dark {
+  border: 1px solid $gray-dark;
+}
+
+.b-all-gray-darker {
+  border: 1px solid $gray-darker;
+}
+
+.b-all-gray-lighter {
+  border: 1px solid $gray-lighter;
+}
+
+.b-right-gray-lighter {
+  border-right: 1px solid $gray-lighter;
+}
+
+.b-bottom-gray-lighter {
+  border-bottom: 1px solid $gray-lighter;
+}
+
+.b-all-gray-light {
+  border: 1px solid $gray-light;
+}
+
+.b-top-gray-light {
+  border-top: 1px solid $gray-light;
+}
+
+.b-bottom-gray-light {
+  border-bottom: 1px solid $gray-light;
+}
+
+.b-top-gray-darker {
+  border-top: 1px solid $gray-darker;
+}
+
+.b-bottom-gray-darker {
+  border-bottom: 1px solid $gray-darker;
+}
+
+.b-all-transparent {
+  border: 1px solid transparent;
+}
+
+// Zero Border Classes
+.left-border-clear, .b-left-0, .b-left-none {
+  border-left: 0 !important;
+}
+
+.b-all-light-border {
+  border: 1px solid #ebebeb;
+}
+
+.b-right-0, .b-right-none {
+  border-right: 0;
+}
+
+.b-top-0, .b-top-none {
+  border-top: 0;
+}
+
+.b-bottom-0, .b-bottom-none {
+  border-bottom: 0;
+}
+
+.b-all-0 {
+  border:0 !important;
+}

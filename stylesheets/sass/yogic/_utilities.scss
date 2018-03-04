@@ -1,0 +1,293 @@
+// Should only contains utilites, which are usually small and project wise re-usable
+// Must not contain more than 3-4 lines of code
+// if length of code is more than 3-4 lines, then it is not a utility, try _components.scss instead
+// name the utilities very carefully.
+// Do not nest more than 3 levels until absolutely necessary,
+// instead use BEM methodology if possible.
+// Paddiding Related Classes
+// Strictly Use Padding Generator Mixin for adding padding related base classes
+$spacing-variants: (top, bottom, left, right, x-axis, y-axis, all);
+$spacing-types: ( 'p': 'padding', 'm': 'margin');
+$spacing-sizes: (0, 5, 10, 15, 20, 30, 60); //Indicates Spacing Sizes for e.g padding
+@each $pos in $spacing-variants {
+  @if $pos==top {
+    @each $size in $spacing-sizes {
+      @each $abbr,
+      $type in $spacing-types {
+        $class-name: '.'+$abbr+'-top-'+$size;
+        @include spacing-generator($class-name, $type, $size, null, null, null)
+      }
+    }
+  }
+  @if $pos==right {
+    @each $size in $spacing-sizes {
+      @each $abbr,
+      $type in $spacing-types {
+        $class-name: '.'+$abbr+'-right-'+$size;
+        @include spacing-generator($class-name, $type, null, $size, null, null)
+      }
+    }
+  }
+  @if $pos==bottom {
+    @each $size in $spacing-sizes {
+      @each $abbr,
+      $type in $spacing-types {
+        $class-name: '.'+$abbr+'-bottom-'+$size;
+        @include spacing-generator($class-name, $type, null, null, $size, null)
+      }
+    }
+  }
+  @if $pos==left {
+    @each $size in $spacing-sizes {
+      @each $abbr,
+      $type in $spacing-types {
+        $class-name: '.'+$abbr+'-left-'+$size;
+        @include spacing-generator($class-name, $type, null, null, null, $size)
+      }
+    }
+  }
+  @if $pos==x-axis {
+    @each $size in $spacing-sizes {
+      @each $abbr,
+      $type in $spacing-types {
+        $class-name: '.'+$abbr+'-x-axis-'+$size;
+        @include spacing-generator($class-name, $type, null, $size, null, $size)
+      }
+    }
+  }
+  @if $pos==y-axis {
+    @each $size in $spacing-sizes {
+      @each $abbr,
+      $type in $spacing-types {
+        $class-name: '.'+$abbr+'-y-axis-'+$size;
+        @include spacing-generator($class-name, $type, $size, null, $size, null)
+      }
+    }
+  }
+  @if $pos==all {
+    @each $size in $spacing-sizes {
+      @each $abbr,
+      $type in $spacing-types {
+        $class-name: '.'+$abbr+'-all-'+$size;
+        @include spacing-generator($class-name, $type, $size, $size, $size, $size)
+      }
+    }
+  }
+}
+
+// Flex box Utilities
+.flex {
+  display: flex !important;
+}
+
+.inline-flex {
+  display: inline-flex !important;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.inline-flex-center {
+  display: inline-flex;
+  align-items: center;
+}
+
+.flex-justify-space-around {
+  @include justify-content(space-around);
+}
+
+.flex-justify-space-between {
+  @include justify-content(space-between);
+}
+
+.flex-justify-center {
+  @include justify-content(center);
+}
+
+.flex-justify-start {
+  @include justify-content(flex-start);
+}
+
+.flex-justify-end {
+  @include justify-content(flex-end);
+}
+
+.flex-align-items-end {
+  @include align-items(flex-end);
+}
+
+.flex-align-items-center {
+  @include align-items(center);
+}
+
+.flex-direction-row-reverse {
+  @include flex-direction(row-reverse);
+}
+
+.display-flex {
+  @extend %flexbox;
+}
+
+.flex-flow-row-wrap {
+  @include flex-flow(row wrap);
+}
+
+.flex-wrap {
+  @include flex-wrap(wrap);
+}
+
+.flex-direction-column {
+  @include flex-direction(column);
+}
+
+.flex-align-start {
+  @include align-items(flex-start);
+}
+
+.flex-all-center {
+  @extend %flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.xs-no-flex {
+  @include mediaQuery($max, $pre-tablet) {
+    display: inherit !important;
+  }
+}
+
+// Block Utilities
+.display-block {
+  display: block;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+// Ellipsis Classes
+$ellipsis-list: (1, 2, 3, 4, 5, 6);
+// Iterate through each set of values in map to generate text classes
+@each $line in $ellipsis-list {
+  @if $line==1 {
+    .ellipsis-1-line {
+      @include ellipsis(1);
+    }
+  }
+  @if $line > 1 {
+    .ellipsis-#{$line}-lines {
+      @include ellipsis($line);
+    }
+  }
+}
+
+// No Last Borders Card
+.no-lb {
+  &:not(:last-child) {
+    &.border-bottom, & .border-bottom {
+      border-bottom: 0
+    }
+    &.border-top,
+    & .border-top {
+      border-top: 0
+    }
+    &.border-right,
+    & .border-right {
+      border-right: 0
+    }
+    &.border-left,
+    & .border-left {
+      border-left: 0
+    }
+  }
+}
+
+//Object Fit Css Property
+//Used mostly to Emulate background position for img tag
+.object-fit-cover {
+  object-fit: cover;
+}
+
+// Positioning Classes
+.pos-relative {
+  @include relative(null);
+}
+
+.pos-absolute {
+  @include absolute(null);
+}
+
+.pos-fixed {
+  @include fixed(null);
+}
+
+.left-0 {
+  left: 0 !important;
+}
+
+.top-0 {
+  top: 0 !important;
+}
+
+// Add this class wherever you need to hide overflow content and add scroll instead
+.add-scroll {
+  overflow-y: auto;
+  @include scrollbars(4px, $gray, transparent, 0);
+}
+
+// Word-break
+.break-words {
+  word-break: break-word;
+}
+
+// Cursor Pointer
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// Border Radius
+.b-radius-0 {
+  border-radius: 0;
+}
+
+// Line height Classes
+.line-height-20 {
+  line-height: 20px;
+}
+
+.line-height-30 {
+  line-height: 30px;
+}
+
+.line-height-36 {
+  line-height: 36px;
+}
+
+.line-height-24 {
+  line-height: 24px;
+}
+
+.line-height-16 {
+  line-height: 16px;
+}
+
+// Text decoration classes
+.text-decoration-none {
+  text-decoration: none;
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+  }
+}
+
+.text-decoration-underline {
+  text-decoration: underline;
+  &:hover, &:focus, &:active {
+    text-decoration: underline;
+  }
+}

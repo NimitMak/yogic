@@ -1,0 +1,14 @@
+// Toggles
+//
+// Used in conjunction with global variables to enable certain theme features.
+
+@mixin box-shadow($shadow...) {
+  box-shadow: $shadow;
+}
+
+// Cumulative Mixins File ,which import all the other mixins.
+
+@import 'mixins/flexbox';
+@import 'mixins/typography';
+@import 'mixins/media';
+@import 'mixins/utilities';
