@@ -2,7 +2,7 @@
 html,
 body {
   font-size: $font-size-base;
-  @include scrollbars(8px, $gray-dark, transparent, 10px);
+  // @include scrollbars(8px, $gray-dark, transparent, 10px);
   @include mediaQuery($max, $pre-tablet) {
     font-size: $font-size-base - 2;
   }

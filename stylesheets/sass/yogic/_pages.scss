@@ -1,7 +1,12 @@
 // Page Specific Styles
 // Homepage
 .logo {
-  width: 50px;
+  width: 80px;
+  height: auto;
+  position: absolute;
+  background: #fff;
+  z-index: 999;
+  padding: 0 15px 15px;
 }
 .homepage {
   & .home-bg {
@@ -14,6 +19,12 @@
     background-color: rgba(151, 134, 76, 0.8);
   }
   & .homepage-carousel {
+    & .item {
+      min-height: 400px;
+      background: url(../../images/banner.jpg);
+      background-position: center center;
+      background-size: cover;
+    }
     & .carousel-caption {
       top: 25%;
       right: 10%;
@@ -145,219 +156,6 @@
         border: none;
       }
     }
-  }
-}
-
-// Certificates Page
-.certificates {
-  & .certificates-bg {
-    background-color: #EEF2C5;
-  }
-  & .certificate-tabs {
-    & .nav-tabs {
-      border-bottom: 1px solid #071a38;
-      & li {
-        margin: 0 30px 0;
-        & a {
-          color: rgba(102, 102, 102, 0.6);
-          background: none;
-          border: none;
-          border-bottom: 3px solid transparent;
-        }
-        &.active {
-          & a {
-            color: #000;
-            border-bottom: 3px solid $brand-primary;
-          }
-        }
-      }
-    }
-    & .tab-content {
-      & .tags {
-        padding: 4px 11px 3px 9px;
-        background-color: #D9D7AA;
-      }
-    }
-  }
-  & .certificates-accordion {
-    & .panel {
-      border-radius: 0;
-      border: none;
-      box-shadow: none;
-      & .panel-heading {
-        border-radius: 0;
-        padding: 0;
-        background: none;
-        border: none;
-        border-top: 1px solid $gray-light;
-        & .panel-title {
-          & a {
-            @extend .display-flex;
-            padding: 30px 10px;
-            text-decoration: none;
-            position: relative;
-            font-size: 20px;
-            color: #333;
-            font-weight: 300;
-            &:after {
-              @extend .fa;
-              content: '\f068';
-              position: absolute;
-              right: 2%;
-              top: 33%;
-            }
-            &.collapsed {
-              &:after {
-                content: '\f067';
-                @extend .fa;
-              }
-            }
-          }
-        }
-      }
-      & .panel-body {
-        border: none;
-        font-weight: 300;
-        font-size: 16px;
-      }
-    }
-  }
-}
-
-// About Us Page
-.about {
-  & .about-sidebar {
-    position: fixed;
-    top: 250px;
-    & li {
-      & a {
-        & .affix-text {
-          opacity: 0;
-          transition: 0.5s opacity linear;
-          color: #333;
-          font-size: 12px;
-        }
-        & .bull {
-          color: #000;
-          opacity: 0.2;
-          transition: 0.5s opacity linear;
-        }
-        &:hover, &:focus {
-          background: none;
-          color: inherit;
-        }
-      }
-      &.active {
-        & a {
-          & .affix-text {
-            opacity: 1;
-            transition: 0.5s opacity linear;
-          }
-        }
-        & .bull {
-          opacity: 1;
-          transition: 0.5s opacity linear;
-        }
-      }
-    }
-  }
-  & .mumbai-chapter {
-    background: url(http://placehold.it/1920x700);
-    background-position: center center;
-    background-size: cover;
-  }
-  & .goals {
-    background: url(http://placehold.it/1920x700/990033);
-    background-position: center center;
-    background-size: cover;
-  }
-  & .principles {
-    background: url(http://placehold.it/1920x700);
-    background-position: center center;
-    background-size: cover;
-  }
-}
-
-// Member Benefits
-.member-benefits {
-  & .mb-bg {
-    background-color: #eef2c5;
-  }
-  & .mb-inside-bg {
-    background-color: #003399;
-  }
-  & .mb-sidebar {
-    position: fixed;
-    top: 250px;
-    & li {
-      & a {
-        & .affix-text {
-          opacity: 0;
-          transition: 0.5s opacity linear;
-          color: #333;
-          font-size: 12px;
-        }
-        & .bull {
-          color: #000;
-          opacity: 0.2;
-          transition: 0.5s opacity linear;
-        }
-        &:hover, &:focus {
-          background: none;
-          color: inherit;
-        }
-      }
-      &.active {
-        & a {
-          & .affix-text {
-            opacity: 1;
-            transition: 0.5s opacity linear;
-          }
-        }
-        & .bull {
-          opacity: 1;
-          transition: 0.5s opacity linear;
-        }
-      }
-    }
-  }
-  .mb-tabs {
-    & li {
-      margin: 0;
-      & a {
-        border-radius: 0;
-        padding: 14px 40px;
-        line-height: 1;
-        background-color: #fff;
-        margin: 0;
-        &:hover, &:focus {
-          border-color: transparent;
-        }
-      }
-      &.active {
-        & a {
-          color: #fff;
-          background: $brand-primary;
-          font-weight: 700;
-          border: 1px solid transparent;
-        }
-      }
-      &:not(:last-child) {
-        border-right: 1px solid $gray-lightest;
-      }
-    }
-  }
-  & .cta-section-1 {
-    padding: 100px 0 25px 0;
-    background-image: url(http://placehold.it/257x163);
-    background-position: center center;
-    background-size: cover;
-  }
-  & .cta-section-2 {
-    padding: 100px 0 25px 0;
-    background-image: url(http://placehold.it/257x163);
-    background-position: center center;
-    background-size: cover;
   }
 }
 
