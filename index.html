@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="stylesheets/css/main.min.css">
 </head>
 
-<body class="homepage p-bottom-60 m-bottom-60">
+<body class="homepage">
   <div class="container-fluid">
     <!-- Navbar -->
     <div class="row">
@@ -19,8 +19,8 @@
         <div class="col-xs-12 top-ticker text-right b-bottom-gray-lightest bg-gray-dark">
           <ul class="list-unstyled list-inline top-ticker__list m-bottom-0 p-right-15 p-y-axis-5">
             <li class="text-white">Available At:</li>
-            <li><a href="" class="inline-flex text-white text-light text-decoration-underline", title="Available in Bengaluru", data-toggle="tooltip", data-placement="bottom">Bigbasket</a></li>
-            <li><a href="" class="inline-flex text-white text-light text-decoration-underline", title="Available Pan India", data-toggle="tooltip", data-placement="bottom">Amazon</a></li>
+            <li><a href="" class="inline-flex text-white text-light text-decoration-underline" , title="Available in Bengaluru" , data-toggle="tooltip" , data-placement="bottom">Bigbasket</a></li>
+            <li><a href="" class="inline-flex text-white text-light text-decoration-underline" , title="Available Pan India" , data-toggle="tooltip" , data-placement="bottom">Amazon</a></li>
           </ul>
         </div>
         <div class="col-xs-12 flex-center flex-justify-space-between">
@@ -41,16 +41,16 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav yamm navbar-nav navbar-right hidden-xs">
               <li class="dropdown yamm-fw">
-                <a href="index.html" class="text-uppercase">Home</a>
+                <a href="#home" class="text-uppercase scroll-to" data-offset="80">Home</a>
               </li>
-              <li class="dropdown yamm-fw">
-                <a href="" class="text-uppercase dropdown-toggle" data-toggle="dropdown">Milk Smoothies</a>
+              <li class="">
+                <a href="#milksmoothies" class="text-uppercase scroll-to" data-offset="80">Milk Smoothies</a>
               </li>
-              <li class="dropdown yamm-fw">
-                <a href="" class="text-uppercase dropdown-toggle" data-toggle="dropdown">Our Story</a>
+              <li class="">
+                <a href="#ourstory" class="text-uppercase scroll-to" data-offset="80">Our Story</a>
               </li>
-              <li class="dropdown yamm-fw">
-                <a href="" class="text-uppercase dropdown-toggle" data-toggle="dropdown">Contact US</a>
+              <li class="">
+                <a href="mailto:joe@example.com?subject=feedback" class="text-uppercase">Contact US</a>
               </li>
             </ul>
           </div>
@@ -59,7 +59,7 @@
     </div>
     <!-- Main Content -->
     <!-- Carousel -->
-    <div class="row main-content">
+    <div class="row main-content" id="home">
       <div class="bs-example homepage-carousel" data-example-id="simple-carousel">
         <div class="carousel slide" id="carousel-example-generic" data-ride="carousel">
           <div class="carousel-inner" role="listbox">
@@ -93,21 +93,98 @@
       </div>
     </div>
     <!-- End Carousel -->
+    <!-- Start Smoothies Section -->
+    <div class="row p-y-axis-60" id="milksmoothies">
+      <div class="col-xs-12 text-center p-top-15">
+        <p class="m-bottom-0 h3 text-bold">Milk Smoothies - How we are different</p>
+      </div>
+      <div class="col-xs-12 col-md-5 m-top-30 p-top-15">
+        <img src="http://placehold.it/300x350" alt="Smoothies" class="img-responsive center-block">
+        <p class="m-bottom-0 text-center h6 m-top-15">Cocoa Milk Smoothie</p>
+      </div>
+      <div class="col-xs-12 col-md-6 m-top-60">
+        <p class="m-bottom-0 h4 text-uppercase">Real Milk, No Junk</p>
+        <div class="row m-top-30 p-top-15">
+          <div class="col-xs-12 col-md-6 flex-center">
+            <span class="fa fa-chevron-right h4"></span>
+            <span class="m-left-15 h4">8gm Protein</span>
+          </div>
+          <div class="col-xs-12 col-md-6 flex-center">
+            <span class="fa fa-chevron-right h4"></span>
+            <span class="m-left-15 h4">Enriched with something</span>
+          </div>
+        </div>
+        <div class="row m-top-30 p-top-15">
+          <div class="col-xs-12 col-md-6 flex-center">
+            <span class="fa fa-chevron-right h4"></span>
+            <span class="m-left-15 h4">Low Fat</span>
+          </div>
+          <div class="col-xs-12 col-md-6 flex-center">
+            <span class="fa fa-chevron-right h4"></span>
+            <span class="m-left-15 h4">No Added Sugar</span>
+          </div>
+        </div>
+        <div class="row m-top-30 p-top-15">
+          <div class="col-xs-12 col-md-6 flex-center">
+            <span class="fa fa-chevron-right h4"></span>
+            <span class="m-left-15 h4">Low Fat</span>
+          </div>
+          <div class="col-xs-12 col-md-6 flex-center">
+            <span class="fa fa-chevron-right h4"></span>
+            <span class="m-left-15 h4">No Added Sugar</span>
+          </div>
+        </div>
+        <div class="row m-top-30 p-top-15">
+          <div class="col-xs-12 col-md-6 flex-center">
+            <span class="fa fa-chevron-right h4"></span>
+            <span class="m-left-15 h4">Low Fat</span>
+          </div>
+          <div class="col-xs-12 col-md-6 flex-center">
+            <span class="fa fa-chevron-right h4"></span>
+            <span class="m-left-15 h4">No Added Sugar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Smoothies Section -->
+    <!-- Our Story Section -->
+    <div class="row p-y-axis-60 story-bg" id="ourstory">
+      <div class="col-xs-12 text-center p-top-15">
+        <p class="m-bottom-0 h3 text-bold">Our Story</p>
+      </div>
+      <div class="col-xs-12 col-md-5 m-top-30 p-top-15">
+        <img src="http://placehold.it/300x350" alt="Smoothies" class="img-responsive center-block">
+      </div>
+      <div class="col-xs-12 col-md-6 m-top-60">
+        <p class="m-bottom-10 h5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat voluptates nulla porro vel architecto iure est mollitia quis, nemo eaque sequi numquam ut veritatis quos tenetur optio commodi nostrum eius.</p>
+        <p class="m-bottom-10 h5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat voluptates nulla porro vel architecto iure est mollitia quis, nemo eaque sequi numquam ut veritatis quos tenetur optio commodi nostrum eius.</p>
+        <p class="m-bottom-10 h5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat voluptates nulla porro vel architecto iure est mollitia quis, nemo eaque sequi numquam ut veritatis quos tenetur optio commodi nostrum eius. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat voluptates nulla porro vel architecto iure est mollitia quis, nemo eaque sequi numquam ut veritatis quos tenetur optio commodi nostrum eius.</p>
+      </div>
+    </div>
+    <!-- End Our Story Section -->
+    <!-- Footer Start -->
+    <div class="footer row bg-gray-dark p-y-axis-15">
+      <div class="col-xs-12 flex-center flex-justify-space-between">
+        <a href="mailto:joe@example.com?subject=feedback" class="text-white">Contact US</a>
+        <p class="m-bottom-0 text-white">&copy; Copyright Yogic 2018</p>
+      </div>
+    </div>
+    <!-- Footer End -->
   </div>
-  <!-- Footer End -->
   <!-- Footer Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="javascript/main.js" async></script>
   <!-- End FooterScripts -->
   <script>
-    var calculateNavbarHeight = function() {
-      var height = $('.common-nav').outerHeight(true);
-      return height;
-    };
-    $(document).on('ready', function() {
-      var height = calculateNavbarHeight();
-      $('.main-content').css('padding-top', height);
-    });
+  var calculateNavbarHeight = function() {
+    var height = $('.common-nav').outerHeight(true);
+    return height;
+  };
+  $(document).on('ready', function() {
+    var height = calculateNavbarHeight();
+    $('.main-content').css('padding-top', height);
+  });
   </script>
 </body>
 

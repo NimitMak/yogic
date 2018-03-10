@@ -7,6 +7,7 @@
   background: #fff;
   z-index: 999;
   padding: 0 15px 15px;
+  box-shadow: 1.5px 28px 44px 0 rgba(0,0,0,.2);
 }
 .homepage {
   & .home-bg {
@@ -17,6 +18,9 @@
   }
   & .volunteers-bg {
     background-color: rgba(151, 134, 76, 0.8);
+  }
+  & .story-bg {
+    background: #F2DEBD;
   }
   & .homepage-carousel {
     & .item {
